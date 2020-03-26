@@ -148,7 +148,12 @@ http {
  
        # route requests to the local development server
        # this is where you set up locations to route to different servers you're running locally
-       # the following would point https://myserver.local/api to http://127.0.0.1:3001/
+       # the following would point https://myserver.local/ to http://127.0.0.1:8865/
+       location / {
+           proxy_pass          http://127.0.0.1:8865/;
+       }
+       # if you have a backend running the following would point 
+       # https://myserver.local/api to http://127.0.0.1:3001/
        location /api {
            proxy_pass          http://127.0.0.1:3001/;
        }
