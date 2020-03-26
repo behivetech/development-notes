@@ -1,4 +1,4 @@
-## Setting up nginx and SSL
+# Setting up nginx and SSL on a Mac
 
 If you don't have nginx installed already, install it with [homebrew](https://docs.brew.sh/Installation)
 ```
@@ -59,7 +59,7 @@ mkdir -p /usr/local/etc/ssl/certs/
 sudo cp private.crt /usr/local/etc/ssl/certs/self-signed.crt
 ```
 
-### Create snippets to use with NGINX
+## Create snippets to use with NGINX
 Create the requisite directory:
 ```
 mkdir -p /usr/local/etc/nginx/snippets
@@ -106,7 +106,7 @@ add_header X-Content-Type-Options nosniff;
 ssl_dhparam /usr/local/etc/ssl/certs/dhparam.pem;
 ```
 
-### Configure NGINX to use SSL/TLS
+## Configure NGINX to use SSL/TLS
 Configure nginx.conf:
 ```
 sudo vim /usr/local/etc/nginx/nginx.conf
@@ -161,7 +161,7 @@ http {
 }
 ```
 
-### Setting up your hosts file to point to myserver.local
+## Setting up your hosts file to point to myserver.local
 
 Edit the /etc/hosts file
 ```
@@ -173,7 +173,7 @@ Add the following line to this file and save it.
 127.0.0.1 myserver.local
 ```
 
-### Test and start up NGINX
+## Test and start up NGINX
 Check for syntax errors in nginx.conf:
 ```
 sudo nginx -t
@@ -190,7 +190,7 @@ nginx: [warn] "ssl_stapling" ignored, issuer certificate not found for certifica
 nginx: [warn] "ssl_stapling" ignored, issuer certificate not found for certificate "/usr/local/etc/ssl/certs/self-signed.crt"
 ```
 
-### Helpful references for NGINX and Certificate setup
+## Helpful references for NGINX and Certificate setup
 
 [Generate ssl certificates with Subject Alt Names on OSX](https://gist.github.com/leevigraham/e70bc5c0a585f40536252abab61875d8)
 
