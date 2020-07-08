@@ -90,6 +90,13 @@ Connect to database
 heroku pg:psql
 ```
 
+## package.json setting
+Should add which version of node the app has been developed on in the package.json file...
+```
+  "engines": {
+    "node": "13.x"
+  }
+```
 
 ## Define a Procfile
 Use a Procfile, a text file in the root directory of your application, to explicitly declare what command should be executed to start your app.
