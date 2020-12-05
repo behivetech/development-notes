@@ -103,7 +103,14 @@ resolver_timeout 5s;
 add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
 add_header X-Frame-Options DENY;
 add_header X-Content-Type-Options nosniff;
-ssl_dhparam /usr/local/etc/ssl/certs/dhparam.pem;
+ssl_dhparam /etc/ssl/certs/dhparam.pem;
+```
+
+Check to see if `/etc/ssl/certs/dhparam.pem` exists. If not, create one with the following...
+
+```
+cd /etc/ssl/certs/
+sudo openssl dhparam -out dhparam.pem 4096
 ```
 
 ## Configure NGINX to use SSL/TLS
