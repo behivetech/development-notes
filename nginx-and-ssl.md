@@ -6,10 +6,10 @@ brew update
 brew install nginx
 ```
 
-In your projects folder create a directory for the certificate setup
+In a desired folder create a directory for the certificate setup
 ```
-mkdir -p ~/projects/myserver.local
-cd ~/projects/myserver.local
+mkdir -p ~/myserver.local
+cd ~/myserver.local
 ```
 
 This will be a set up to point to a domain locally called myserver.local. Change the name myserver.local
@@ -28,9 +28,9 @@ countryName                 = US
 countryName_default         = US
 stateOrProvinceName         = Colorado
 stateOrProvinceName_default = Colorado
-localityName                = Broomfield
-localityName_default        = Broomfield
-organizationName            = Rally
+localityName                = Denver
+localityName_default        = Denver
+organizationName            = MyAwesomeOrg
 organizationName_default    = Newism
 commonName                  = myserver.local
 commonName_max              = 64
